@@ -157,10 +157,10 @@ contract GetGift is FunctionsClient, ERC721URIStorage {
         tokenId++;
     }
 
-    function addGift(string memory giftName, string memory _tokenUri)
-        public
-        onlyAllowList
-    {
+    function addGift(
+        string memory giftName,
+        string memory _tokenUri
+    ) public onlyAllowList {
         giftToTokenUri[bytes(giftName)] = _tokenUri;
     }
 
